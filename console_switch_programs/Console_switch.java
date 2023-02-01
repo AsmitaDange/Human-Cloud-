@@ -14,8 +14,11 @@ public class Console_switch {
 		My_queue q=new My_queue(5);
 		My_stack st=new My_stack(5);
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter any one of the option from following\n1.Array List\n2.Linked List\n3.Stack\n4.Queue");
+		do
+		{
+		System.out.println("Enter any one of the option from following\n1.Array List\n2.Linked List\n3.Stack\n4.Queue\n");
 		int n=sc.nextInt();
+		
 		switch(n)
 		{
 		case 1:
@@ -65,7 +68,7 @@ public class Console_switch {
 				ls.add(s);
 				break;
 			case 2:
-				System.out.println("Enter which index data you have to remove");
+				System.out.println("Enter which String data you have to remove");
 				int i=sc.nextInt();
 				ls.remove(i);
 				break;
@@ -114,7 +117,7 @@ public class Console_switch {
 			break;
 			
 		case 4:
-			System.out.println("Which opration you want to perform on Stack:\n1.empty\n2.put\n3.poll\n4.peek\n");
+			System.out.println("Which opration you want to perform on queue:\n1.empty\n2.put\n3.poll\n4.peek\n");
 			int u=sc.nextInt();
 			switch(u)
 			{
@@ -122,7 +125,7 @@ public class Console_switch {
 				System.out.println(q.empty());
 				break;
 			case 2:
-				System.out.println("Enter which index data you want to add into stack");
+				System.out.println("Enter which String data you want to add into queue");
 				String i=sc.next();
 				q.put(i);
 				break;
@@ -141,11 +144,12 @@ public class Console_switch {
 		default :
 			System.out.println("Please enter valid operation");
 			break;
+			}
+		
+		System.out.println("Enter 1 to continue or 2 to exit\n");
+		
 			
-				
-			
-			
-		}
+		}while(sc.nextInt()==1);
 	}
 
 }
