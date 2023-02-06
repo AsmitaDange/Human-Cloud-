@@ -11,9 +11,10 @@ import stack.My_stack;
 public class Console_switch {
 	public static void main(String[] args) {
 		My_Array_list ar=new My_Array_list(10);
-		Linked_list ls=new Linked_list(5);
+		//Linked_list ls=new Linked_list(5);
 		My_queue q=new My_queue(5);
 		My_stack st=new My_stack(5);
+		Llist ls= new Llist();
 		Scanner sc= new Scanner(System.in);
 		do
 		{
@@ -58,34 +59,28 @@ public class Console_switch {
 			break;
 			
 		case 2:
-			System.out.println("Which opration you want to perform on Linked List:\n1.add\n2.remove\n3.contains\n4.empty\n5.indexof");
+			System.out.println("Which opration you want to perform on Linked List:\n1.Add from first\n2.Add from last\n3.Delete from first\n4.Delete from last\n");
 			int o=sc.nextInt();
 			
 			switch(o)
 			{
 			case 1:
-				System.out.println("Enter String to add in Linked List");
+				System.out.println("Enter String to add from first in Linked List");
 				String s=sc.next();
-				ls.add(s);
+				ls.addFirst(s);
 				break;
 			case 2:
-				System.out.println("Enter which position data you have to remove");
-				int i=sc.nextInt();
-				ls.remove(i);
+				System.out.println("Enter String to add from last in Linked List");
+				String i=sc.next();
+				ls.addLast(i);
 				break;
 			case 3:
-				System.out.println("Enter data you want to check whether it contains or not");
-				String str=sc.next();
-				System.out.println(ls.contain(str));
+				ls.deleteFirst();
 				break;
 			case 4:
-				System.out.println(ls.empty());
+				ls.deleteLast();
 				break;
-			case 5:
-				System.out.println("Enter data to check index of that data");
-				str=sc.next();
-				System.out.println(ls.indexof(str));
-				break;
+			
 			default:
 				System.out.println("Please enter valid operation");
 				break;
