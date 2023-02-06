@@ -1,5 +1,6 @@
 package console_switch_programs;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import array_list.*;
@@ -68,7 +69,7 @@ public class Console_switch {
 				ls.add(s);
 				break;
 			case 2:
-				System.out.println("Enter which String data you have to remove");
+				System.out.println("Enter which position data you have to remove");
 				int i=sc.nextInt();
 				ls.remove(i);
 				break;
@@ -100,9 +101,15 @@ public class Console_switch {
 				System.out.println(st.empty());
 				break;
 			case 2:
-				System.out.println("Enter which index data you want to add into stack");
-				String i=sc.next();
+				System.out.println("Enter which data you want to add into stack");
+				try {
+				int i=sc.nextInt();
 				st.push(i);
+				}
+				catch(InputMismatchException e)
+				{
+					System.out.println("Please enter Integer type data only");
+				}
 				break;
 			case 3:
 				st.pop();

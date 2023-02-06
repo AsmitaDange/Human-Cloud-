@@ -34,7 +34,7 @@ public class My_Array_list {
 	}
 	public void remove(int ind)
 	{
-		if(ind<=top)
+		try
 		{
 			for(int i=ind;i<=top;i++)
 			{
@@ -43,7 +43,7 @@ public class My_Array_list {
 			top--;
 			System.out.println("Data Successfully deleted");
 		}
-		else
+		catch (Exception e) 
 		{
 			System.out.println("Array list is empty");
 		}

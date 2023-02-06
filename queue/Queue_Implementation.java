@@ -10,7 +10,7 @@ public class Queue_Implementation {
 		q.put("owl");
 		System.out.println(q.empty());
 		System.out.println("My queue: ");
-		for(int i=0;i<q.top;i++)
+		for(int i=q.rare;i<q.top;i++)
 		{
 			System.out.println(q.arr[i]);
 		}

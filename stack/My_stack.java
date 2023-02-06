@@ -4,11 +4,11 @@ public class My_stack {
 	
 	int maxsize;
 	int top;
-	String arr[];
+	int arr[];
 	
 	public My_stack(int n){
 		maxsize=n;
-		arr=new String[maxsize];
+		arr=new int[maxsize];
 		top=-1;
 		
 	}
@@ -26,7 +26,7 @@ public class My_stack {
 		
 	}
 	
-	public void push(String str)
+	public void push(int str)
 	{
 		if(top<maxsize)
 		{
@@ -45,22 +45,22 @@ public class My_stack {
 	
 	public boolean pop()
 	{
-		if(!(this.empty()))
+		try
 		{
-			String t=this.peek();
-			arr[top]=null;
+			int t=this.peek();
+			//arr[top]=null;
 			top--;
 			System.out.println("Data poped successfully");
 			return true;
 		}
-		else
+		catch(Exception e)
 		{
 			System.out.println("Stack is empty");
 			return false; 
 		}
 	}
 	
-	public String peek() 
+	public int peek() 
 	{
 		if(top>=0)
 		{
@@ -68,7 +68,7 @@ public class My_stack {
 		}
 		else
 		{
-			return "Exception: Stack is empty";
+			return -1;
 		}
 		
 		

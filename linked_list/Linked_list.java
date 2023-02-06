@@ -34,15 +34,15 @@ public class Linked_list {
 	}
 	public void remove(int ind)
 	{
-		if(ind<=top)
+		try
 		{
 			arr[ind]=null;
-			top--;
+			//top--;
 			System.out.println("Data removed successfully");
 		}
-		else
+		catch(Exception e)
 		{
-			System.out.println("Linked list is empty");
+			System.out.println("Data not present at this location");
 		}
 		
 		

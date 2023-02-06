@@ -47,7 +47,7 @@ public class My_queue {
 	
 	public boolean poll()
 	{
-		if(!(this.empty()))
+		try
 		{
 			//String t=this.peek();
 			arr[rare]=null;
@@ -55,7 +55,7 @@ public class My_queue {
 			System.out.println("data removed successfully");
 			return true;
 		}
-		else
+		catch(Exception e)
 		{
 			System.out.println("Queue is empty");
 			return false;
